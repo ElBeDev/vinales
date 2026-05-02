@@ -116,12 +116,21 @@
             height: 46px;
             width: auto;
             border-radius: 50%;
-            filter: drop-shadow(0 0 5px rgba(212,160,23,0.65)) drop-shadow(0 0 14px rgba(212,160,23,0.3));
-            transition: opacity 0.3s, filter 0.3s;
+            background: radial-gradient(circle, rgba(212,160,23,0.28) 0%, rgba(180,120,10,0.18) 55%, transparent 72%);
+            box-shadow:
+                0 0 0 1.5px rgba(212,160,23,0.55),
+                0 0 12px rgba(212,160,23,0.5),
+                0 0 28px rgba(212,160,23,0.22);
+            filter: drop-shadow(0 0 3px rgba(212,160,23,0.6));
+            transition: opacity 0.3s, filter 0.3s, box-shadow 0.3s;
         }
         .nav-logo-img:hover {
-            opacity: 0.9;
-            filter: drop-shadow(0 0 7px rgba(212,160,23,0.85)) drop-shadow(0 0 18px rgba(198,30,30,0.5));
+            opacity: 0.92;
+            box-shadow:
+                0 0 0 1.5px rgba(212,160,23,0.8),
+                0 0 16px rgba(212,160,23,0.7),
+                0 0 36px rgba(198,30,30,0.35);
+            filter: drop-shadow(0 0 5px rgba(212,160,23,0.8));
         }
         .nav-links {
             display: flex;
@@ -765,10 +774,13 @@
             height: auto;
             border-radius: 50%;
             display: block;
-            filter:
-                drop-shadow(0 0 6px rgba(212,160,23,0.75))
-                drop-shadow(0 0 20px rgba(212,160,23,0.35))
-                drop-shadow(0 0 40px rgba(198,30,30,0.25));
+            background: radial-gradient(circle, rgba(212,160,23,0.32) 0%, rgba(180,120,10,0.2) 52%, transparent 70%);
+            box-shadow:
+                0 0 0 2px rgba(212,160,23,0.6),
+                0 0 20px rgba(212,160,23,0.55),
+                0 0 50px rgba(212,160,23,0.28),
+                0 0 90px rgba(198,30,30,0.18);
+            filter: drop-shadow(0 0 6px rgba(212,160,23,0.65));
         }
         .puros-banner {
             position: relative;
@@ -875,8 +887,13 @@
             height: 50px;
             width: auto;
             border-radius: 50%;
-            opacity: 0.92;
-            filter: drop-shadow(0 0 4px rgba(212,160,23,0.6)) drop-shadow(0 0 10px rgba(212,160,23,0.25));
+            opacity: 0.95;
+            background: radial-gradient(circle, rgba(212,160,23,0.26) 0%, rgba(180,120,10,0.15) 55%, transparent 72%);
+            box-shadow:
+                0 0 0 1.5px rgba(212,160,23,0.5),
+                0 0 10px rgba(212,160,23,0.45),
+                0 0 22px rgba(212,160,23,0.18);
+            filter: drop-shadow(0 0 3px rgba(212,160,23,0.55));
         }
         @media (max-width: 900px) {
             .gallery-strip { grid-template-columns: 1fr; height: auto; }
