@@ -175,6 +175,27 @@
         .nav-toggle.open span:nth-child(2) { opacity: 0; }
         .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
+        /* language toggle */
+        .lang-btn {
+            background: none;
+            border: 1px solid rgba(212,160,23,0.4);
+            color: var(--gold);
+            font-family: var(--sans);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.38rem 0.8rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+            flex-shrink: 0;
+        }
+        .lang-btn:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+
         /* ─── HERO ─── */
         .hero {
             position: relative;
@@ -887,11 +908,12 @@
         </span>
     </a>
     <ul class="nav-links" id="navLinks">
-        <li><a href="#puros">Puros</a></li>
-        <li><a href="#accesorios">Accesorios</a></li>
-        <li><a href="#pipas">Pipas</a></li>
-        <li><a href="#contacto">Visítanos</a></li>
+        <li><a href="#puros" data-es="Puros" data-en="Cigars">Puros</a></li>
+        <li><a href="#accesorios" data-es="Accesorios" data-en="Accessories">Accesorios</a></li>
+        <li><a href="#pipas" data-es="Pipas" data-en="Pipes">Pipas</a></li>
+        <li><a href="#contacto" data-es="Visítanos" data-en="Visit Us">Visítanos</a></li>
     </ul>
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
     <button class="nav-toggle" id="navToggle" aria-label="Menú">
         <span></span><span></span><span></span>
     </button>
@@ -905,16 +927,16 @@
         </div>
         <div class="hero-band">
             <span class="hero-band-line"></span>
-            <span class="hero-band-text">Puros Cubanos Auténticos</span>
+            <span class="hero-band-text" data-es="Puros Cubanos Auténticos" data-en="Authentic Cuban Cigars">Puros Cubanos Auténticos</span>
             <span class="hero-band-line"></span>
         </div>
         <h1 class="hero-title">VI<span class="accent">Ñ</span>ALES</h1>
-        <p class="hero-tagline">
+        <p class="hero-tagline" data-es-html="Calidad real, sabor original y la experiencia&lt;br&gt;que solo un buen puro puede darte." data-en-html="Real quality, original flavor and the experience&lt;br&gt;only a fine cigar can give you.">
             Calidad real, sabor original y la experiencia<br>que solo un buen puro puede darte.
         </p>
         <div class="hero-actions">
-            <a href="#puros" class="btn-gold">Explorar</a>
-            <a href="#contacto" class="btn-ghost">Visítanos</a>
+            <a href="#puros" class="btn-gold" data-es="Explorar" data-en="Explore">Explorar</a>
+            <a href="#contacto" class="btn-ghost" data-es="Visítanos" data-en="Visit Us">Visítanos</a>
         </div>
     </div>
     <div class="hero-scroll">
@@ -926,13 +948,13 @@
 <!-- ─── PULL QUOTE STRIP ─── -->
 <div class="strip">
     <div class="strip-inner">
-        <blockquote>
+        <blockquote data-es-html="&ldquo;Auténticos puros cubanos, traídos directamente de &lt;em&gt;Cuba&lt;/em&gt; para tu paladar. Calidad real. Sabor original.&rdquo;" data-en-html="&ldquo;Authentic Cuban cigars, brought directly from &lt;em&gt;Cuba&lt;/em&gt; for your palate. Real quality. Original flavor.&rdquo;">
             "Auténticos puros cubanos, traídos directamente de <em>Cuba</em> para tu paladar.
             Calidad real. Sabor original."
         </blockquote>
         <div class="strip-stat">
             <div class="stat-num">100%</div>
-            <div class="stat-label">Origen Cubano</div>
+            <div class="stat-label" data-es="Origen Cubano" data-en="Cuban Origin">Origen Cubano</div>
         </div>
     </div>
 </div>
@@ -942,12 +964,12 @@
     <div class="s-inner">
         <div class="puros-head">
             <div class="reveal">
-                <p class="s-label">Selección Exclusiva</p>
-                <h2 class="s-title">Puros <em>Cubanos</em></h2>
+                <p class="s-label" data-es="Selección Exclusiva" data-en="Exclusive Selection">Selección Exclusiva</p>
+                <h2 class="s-title" data-es-html="Puros &lt;em&gt;Cubanos&lt;/em&gt;" data-en-html="Cuban &lt;em&gt;Cigars&lt;/em&gt;">Puros <em>Cubanos</em></h2>
             </div>
             <div class="reveal d1">
                 <div class="gold-rule"></div>
-                <p class="s-text">
+                <p class="s-text" data-es="Cada puro en nuestra vitrina viene directamente de las mejores vegas de Cuba. Sin intermediarios, sin compromisos — solo el auténtico tabaco cubano que merece tu tiempo y tu paladar." data-en="Every cigar in our showcase comes directly from the finest Cuban tobacco farms. No middlemen, no compromises — only the authentic Cuban tobacco your time and palate deserve.">
                     Cada puro en nuestra vitrina viene directamente de las mejores vegas de Cuba.
                     Sin intermediarios, sin compromisos — solo el auténtico tabaco cubano que merece tu tiempo y tu paladar.
                 </p>
@@ -957,7 +979,7 @@
         <div class="puros-banner reveal">
             <img src="https://images.pexels.com/photos/34217309/pexels-photo-34217309.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Puros cubanos premium en caja de madera" loading="lazy">
             <div class="puros-banner-overlay"></div>
-            <span class="puros-banner-label">Colección Premium</span>
+            <span class="puros-banner-label" data-es="Colección Premium" data-en="Premium Collection">Colección Premium</span>
         </div>
 
         <div class="puros-grid">
@@ -972,7 +994,7 @@
                 </div>
                 <p class="puro-num">01</p>
                 <h3 class="puro-name">Robustos &amp; Robusto Extra</h3>
-                <p class="puro-desc">La medida perfecta para una fumada completa. Cuerpo robusto, humo denso y una entrega equilibrada de todos sus sabores desde el primer tiro hasta el final.</p>
+                <p class="puro-desc" data-es="La medida perfecta para una fumada completa. Cuerpo robusto, humo denso y una entrega equilibrada de todos sus sabores desde el primer tiro hasta el final." data-en="The perfect size for a complete smoke. Full body, dense smoke and a balanced delivery of all its flavors from the first draw to the last.">La medida perfecta para una fumada completa. Cuerpo robusto, humo denso y una entrega equilibrada de todos sus sabores desde el primer tiro hasta el final.</p>
             </div>
             <div class="puro-card reveal d1">
                 <div class="puro-icon">
@@ -985,7 +1007,7 @@
                 </div>
                 <p class="puro-num">02</p>
                 <h3 class="puro-name">Churchill &amp; Lonsdale</h3>
-                <p class="puro-desc">Para quienes disponen del tiempo que merecen. Longitud generosa que evoluciona en tercios, revelando complejidad y elegancia en cada centímetro.</p>
+                <p class="puro-desc" data-es="Para quienes disponen del tiempo que merecen. Longitud generosa que evoluciona en tercios, revelando complejidad y elegancia en cada centímetro." data-en="For those who take the time they deserve. Generous length that evolves in thirds, revealing complexity and elegance with every inch.">Para quienes disponen del tiempo que merecen. Longitud generosa que evoluciona en tercios, revelando complejidad y elegancia en cada centímetro.</p>
             </div>
             <div class="puro-card reveal d2">
                 <div class="puro-icon">
@@ -998,7 +1020,7 @@
                 </div>
                 <p class="puro-num">03</p>
                 <h3 class="puro-name">Torpedos &amp; Figurados</h3>
-                <p class="puro-desc">La vitola más artesanal. Cada corte revela una experiencia diferente — el puro que exige maestría desde el encendido hasta el último tercio.</p>
+                <p class="puro-desc" data-es="La vitola más artesanal. Cada corte revela una experiencia diferente — el puro que exige maestría desde el encendido hasta el último tercio." data-en="The most handcrafted vitola. Every cut reveals a different experience — the cigar that demands mastery from the first light to the final third.">La vitola más artesanal. Cada corte revela una experiencia diferente — el puro que exige maestría desde el encendido hasta el último tercio.</p>
             </div>
         </div>
     </div>
@@ -1009,10 +1031,10 @@
     <div class="s-inner">
         <div class="acc-layout">
             <div class="acc-sticky reveal">
-                <p class="s-label">Todo para disfrutar</p>
-                <h2 class="s-title">Acce<em>sorios</em></h2>
+                <p class="s-label" data-es="Todo para disfrutar" data-en="Everything to Enjoy">Todo para disfrutar</p>
+                <h2 class="s-title" data-es-html="Acce&lt;em&gt;sorios&lt;/em&gt;" data-en-html="Acce&lt;em&gt;ssories&lt;/em&gt;">Acce<em>sorios</em></h2>
                 <div class="gold-rule"></div>
-                <p class="s-text">
+                <p class="s-text" data-es="Un buen puro merece los mejores accesorios. Aquí encontrarás todo lo necesario para cuidarlo, cortarlo, encenderlo y conservarlo con el mismo respeto que merece el tabaco cubano." data-en="A fine cigar deserves the finest accessories. Here you will find everything needed to care for, cut, light and store it with the same respect Cuban tobacco deserves.">
                     Un buen puro merece los mejores accesorios. Aquí encontrarás todo lo necesario para 
                     cuidarlo, cortarlo, encenderlo y conservarlo con el mismo respeto que merece el tabaco cubano.
                 </p>
@@ -1029,8 +1051,8 @@
                         <path d="M9 14 L15 18 L9 22" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
                         <path d="M27 14 L21 18 L27 22" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
                     </svg>
-                    <h3 class="acc-name">Cortadores</h3>
-                    <p class="acc-desc">Guillotinas dobles, punch cutters y cortadores de cuña. Cortes limpios para un tiro perfecto sin dañar la capa.</p>
+                    <h3 class="acc-name" data-es="Cortadores" data-en="Cutters">Cortadores</h3>
+                    <p class="acc-desc" data-es="Guillotinas dobles, punch cutters y cortadores de cuña. Cortes limpios para un tiro perfecto sin dañar la capa." data-en="Double guillotines, punch cutters and wedge cutters. Clean cuts for a perfect draw without damaging the wrapper.">Guillotinas dobles, punch cutters y cortadores de cuña. Cortes limpios para un tiro perfecto sin dañar la capa.</p>
                 </div>
                 <div class="acc-card reveal d1">
                     <svg class="acc-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1038,8 +1060,8 @@
                         <path d="M18 9 C18 9 13.5 14.5 13.5 19.5 C13.5 23 15.5 26.5 18 26.5 C20.5 26.5 22.5 23 22.5 19.5 C22.5 14.5 18 9 18 9Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
                         <path d="M18 21 C16.5 22 16 23.5 16 25" stroke="currentColor" stroke-width="1" opacity="0.45" stroke-linecap="round"/>
                     </svg>
-                    <h3 class="acc-name">Encendedores</h3>
-                    <p class="acc-desc">Llama triple, torch y encendedores de cedro. Sin nafta, sin sabores ajenos — solo calor limpio para tu tabaco.</p>
+                    <h3 class="acc-name" data-es="Encendedores" data-en="Lighters">Encendedores</h3>
+                    <p class="acc-desc" data-es="Llama triple, torch y encendedores de cedro. Sin nafta, sin sabores ajenos — solo calor limpio para tu tabaco." data-en="Triple flame, torch and cedar lighters. No lighter fluid, no foreign flavors — just clean heat for your tobacco.">Llama triple, torch y encendedores de cedro. Sin nafta, sin sabores ajenos — solo calor limpio para tu tabaco.</p>
                 </div>
                 <div class="acc-card reveal d2">
                     <svg class="acc-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1050,8 +1072,8 @@
                         <path d="M20.5 13.5 L20.5 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
                         <rect x="16" y="12" width="4" height="3.5" rx="0.5" stroke="currentColor" stroke-width="1" opacity="0.6"/>
                     </svg>
-                    <h3 class="acc-name">Humidores</h3>
-                    <p class="acc-desc">De viaje y de gabinete. Mantén tus puros al 70% de humedad — la condición perfecta para preservar sabor y aroma.</p>
+                    <h3 class="acc-name" data-es="Humidores" data-en="Humidors">Humidores</h3>
+                    <p class="acc-desc" data-es="De viaje y de gabinete. Mantén tus puros al 70% de humedad — la condición perfecta para preservar sabor y aroma." data-en="Travel and cabinet humidors. Keep your cigars at 70% humidity — the perfect condition to preserve flavor and aroma.">De viaje y de gabinete. Mantén tus puros al 70% de humedad — la condición perfecta para preservar sabor y aroma.</p>
                 </div>
                 <div class="acc-card reveal d3">
                     <svg class="acc-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1066,8 +1088,8 @@
                         <line x1="24.4" y1="11.6" x2="22.3" y2="13.7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
                         <line x1="13.7" y1="22.3" x2="11.6" y2="24.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
                     </svg>
-                    <h3 class="acc-name">Accesorios</h3>
-                    <p class="acc-desc">Ceniceros, tubos de viaje, higrómetros y todo lo que completa la experiencia del fumador que sabe lo que quiere.</p>
+                    <h3 class="acc-name" data-es="Accesorios" data-en="Accessories">Accesorios</h3>
+                    <p class="acc-desc" data-es="Ceniceros, tubos de viaje, higrómetros y todo lo que completa la experiencia del fumador que sabe lo que quiere." data-en="Ashtrays, travel tubes, hygrometers and everything that completes the experience of a smoker who knows what they want.">Ceniceros, tubos de viaje, higrómetros y todo lo que completa la experiencia del fumador que sabe lo que quiere.</p>
                 </div>
             </div>
         </div>
@@ -1084,10 +1106,10 @@
             </div>
             <div>
                 <div class="reveal">
-                    <p class="s-label">Para los amantes de la pipa</p>
-                    <h2 class="s-title">El mundo <em>de la pipa</em></h2>
+                    <p class="s-label" data-es="Para los amantes de la pipa" data-en="For Pipe Lovers">Para los amantes de la pipa</p>
+                    <h2 class="s-title" data-es-html="El mundo &lt;em&gt;de la pipa&lt;/em&gt;" data-en-html="The world &lt;em&gt;of the pipe&lt;/em&gt;">El mundo <em>de la pipa</em></h2>
                     <div class="gold-rule"></div>
-                    <p class="s-text" style="margin-bottom: 3rem;">
+                    <p class="s-text" style="margin-bottom: 3rem;" data-es="Si lo tuyo es la pipa, aquí también estás en casa. Una tradición que se disfruta despacio, con el tabaco correcto y los accesorios para mantenerla siempre al 100." data-en="If pipes are your thing, you are home here too. A tradition enjoyed slowly, with the right tobacco and the accessories to keep it always at its best.">
                         Si lo tuyo es la pipa, aquí también estás en casa. Una tradición que se disfruta despacio,
                         con el tabaco correcto y los accesorios para mantenerla siempre al 100.
                     </p>
@@ -1096,22 +1118,22 @@
                     <div class="pipe-item reveal">
                         <span class="pipe-num">01</span>
                         <div>
-                            <span class="pipe-name">Tabaco para pipa</span>
-                            <span class="pipe-desc">Mezclas Virginia, Burley, Latakia y orientales de excelente calidad. Cortes ribbon, flake y rope para cada estilo de fumada.</span>
+                            <span class="pipe-name" data-es="Tabaco para pipa" data-en="Pipe Tobacco">Tabaco para pipa</span>
+                            <span class="pipe-desc" data-es="Mezclas Virginia, Burley, Latakia y orientales de excelente calidad. Cortes ribbon, flake y rope para cada estilo de fumada." data-en="Virginia, Burley, Latakia and Oriental blends of excellent quality. Ribbon, flake and rope cuts for every smoking style.">Mezclas Virginia, Burley, Latakia y orientales de excelente calidad. Cortes ribbon, flake y rope para cada estilo de fumada.</span>
                         </div>
                     </div>
                     <div class="pipe-item reveal d1">
                         <span class="pipe-num">02</span>
                         <div>
-                            <span class="pipe-name">Pipas</span>
-                            <span class="pipe-desc">Distintos estilos y materiales — bruyère, corncob, meerschaum. Para el principiante curioso y el coleccionista exigente.</span>
+                            <span class="pipe-name" data-es="Pipas" data-en="Pipes">Pipas</span>
+                            <span class="pipe-desc" data-es="Distintos estilos y materiales — bruyère, corncob, meerschaum. Para el principiante curioso y el coleccionista exigente." data-en="Different styles and materials — bruyère, corncob, meerschaum. For the curious beginner and the discerning collector.">Distintos estilos y materiales — bruyère, corncob, meerschaum. Para el principiante curioso y el coleccionista exigente.</span>
                         </div>
                     </div>
                     <div class="pipe-item reveal d2">
                         <span class="pipe-num">03</span>
                         <div>
-                            <span class="pipe-name">Accesorios</span>
-                            <span class="pipe-desc">Tampers, limpiapipas, estuches de cuero y todos los implementos para mantener tu pipa siempre a punto.</span>
+                            <span class="pipe-name" data-es="Accesorios" data-en="Accessories">Accesorios</span>
+                            <span class="pipe-desc" data-es="Tampers, limpiapipas, estuches de cuero y todos los implementos para mantener tu pipa siempre a punto." data-en="Tampers, pipe cleaners, leather pouches and all the tools to keep your pipe always in top shape.">Tampers, limpiapipas, estuches de cuero y todos los implementos para mantener tu pipa siempre a punto.</span>
                         </div>
                     </div>
                 </div>
@@ -1124,15 +1146,15 @@
 <div class="gallery-strip">
     <div class="gallery-item">
         <img src="https://images.pexels.com/photos/33105628/pexels-photo-33105628.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cubano disfrutando puros premium" loading="lazy">
-        <div class="gallery-item-label">Herencia Cubana<small>Origen &amp; Tradición</small></div>
+        <div class="gallery-item-label" data-es-html="Herencia Cubana&lt;small&gt;Origen &amp; Tradición&lt;/small&gt;" data-en-html="Cuban Heritage&lt;small&gt;Origin &amp; Tradition&lt;/small&gt;">Herencia Cubana<small>Origen &amp; Tradición</small></div>
     </div>
     <div class="gallery-item">
         <img src="https://images.pexels.com/photos/10343915/pexels-photo-10343915.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Puros cubanos en estuche" loading="lazy">
-        <div class="gallery-item-label">Colección<small>Vitolas Selectas</small></div>
+        <div class="gallery-item-label" data-es-html="Colección&lt;small&gt;Vitolas Selectas&lt;/small&gt;" data-en-html="Collection&lt;small&gt;Select Vitolas&lt;/small&gt;">Colección<small>Vitolas Selectas</small></div>
     </div>
     <div class="gallery-item">
         <img src="https://images.pexels.com/photos/33105617/pexels-photo-33105617.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Artesano enrollando puros en Cuba" loading="lazy">
-        <div class="gallery-item-label">Artesanía<small>Hecho a Mano</small></div>
+        <div class="gallery-item-label" data-es-html="Artesanía&lt;small&gt;Hecho a Mano&lt;/small&gt;" data-en-html="Craftsmanship&lt;small&gt;Handmade&lt;/small&gt;">Artesanía<small>Hecho a Mano</small></div>
     </div>
 </div>
 
@@ -1140,17 +1162,17 @@
 <section class="exp-sec">
     <div class="exp-inner reveal">
         <span class="exp-mark">&ldquo;</span>
-        <p class="exp-quote">
+        <p class="exp-quote" data-es-html="Aquí no solo vienes a comprar,&lt;br&gt;vienes a &lt;strong&gt;disfrutar&lt;/strong&gt; y a encontrar&lt;br&gt;lo que realmente te gusta." data-en-html="Here you don't just come to buy,&lt;br&gt;you come to &lt;strong&gt;enjoy&lt;/strong&gt; and find&lt;br&gt;what you truly love.">
             Aquí no solo vienes a comprar,<br>
             vienes a <strong>disfrutar</strong> y a encontrar<br>
             lo que realmente te gusta.
         </p>
-        <p class="exp-sub">
+        <p class="exp-sub" data-es="Te orientamos para que disfrutes toda la experiencia. Más que una tienda — un lugar donde el buen gusto y el conocimiento van siempre de la mano." data-en="We guide you to enjoy the full experience. More than a shop — a place where good taste and knowledge always go hand in hand.">
             Te orientamos para que disfrutes toda la experiencia.
             Más que una tienda — un lugar donde el buen gusto
             y el conocimiento van siempre de la mano.
         </p>
-        <a href="#contacto" class="btn-gold">Visítanos</a>
+        <a href="#contacto" class="btn-gold" data-es="Visítanos" data-en="Visit Us">Visítanos</a>
     </div>
 </section>
 
@@ -1158,19 +1180,19 @@
 <div class="contact-strip" id="contacto">
     <div class="contact-grid">
         <div class="reveal">
-            <p class="c-label">Ubicación</p>
+            <p class="c-label" data-es="Ubicación" data-en="Location">Ubicación</p>
             <p class="c-value">Viñales Cigar Shop</p>
-            <p class="c-sub">Tu ciudad, México</p>
+            <p class="c-sub" data-es="Tu ciudad, México" data-en="Your city, Mexico">Tu ciudad, México</p>
         </div>
         <div class="reveal d1">
-            <p class="c-label">Horario</p>
-            <p class="c-value">Lunes — Sábado</p>
+            <p class="c-label" data-es="Horario" data-en="Hours">Horario</p>
+            <p class="c-value" data-es="Lunes — Sábado" data-en="Monday — Saturday">Lunes — Sábado</p>
             <p class="c-sub">10:00 am — 8:00 pm</p>
         </div>
         <div class="reveal d2">
-            <p class="c-label">Contacto</p>
+            <p class="c-label" data-es="Contacto" data-en="Contact">Contacto</p>
             <p class="c-value">@vinalescigars</p>
-            <p class="c-sub">Escríbenos para más información</p>
+            <p class="c-sub" data-es="Escríbenos para más información" data-en="Write to us for more information">Escríbenos para más información</p>
         </div>
     </div>
 </div>
@@ -1181,11 +1203,11 @@
         <div class="footer-logo">
             <img src="logo.png" alt="Viñales Cigar Shop" class="footer-logo-img">
         </div>
-        <p class="footer-copy">© 2026 Viñales Cigar Shop — Todos los derechos reservados</p>
+        <p class="footer-copy" data-es="© 2026 Viñales Cigar Shop — Todos los derechos reservados" data-en="© 2026 Viñales Cigar Shop — All rights reserved">© 2026 Viñales Cigar Shop — Todos los derechos reservados</p>
         <ul class="footer-nav">
-            <li><a href="#puros">Puros</a></li>
-            <li><a href="#accesorios">Accesorios</a></li>
-            <li><a href="#pipas">Pipas</a></li>
+            <li><a href="#puros" data-es="Puros" data-en="Cigars">Puros</a></li>
+            <li><a href="#accesorios" data-es="Accesorios" data-en="Accessories">Accesorios</a></li>
+            <li><a href="#pipas" data-es="Pipas" data-en="Pipes">Pipas</a></li>
         </ul>
     </div>
 </footer>
@@ -1224,6 +1246,28 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ─── LANGUAGE TOGGLE ───
+    const langBtn = document.getElementById('langBtn');
+    let currentLang = 'es';
+
+    function setLang(lang) {
+        // Plain-text elements: swap textContent
+        document.querySelectorAll('[data-es]').forEach(el => {
+            el.textContent = el.dataset[lang];
+        });
+        // HTML elements (contain <em>, <br>, <strong>, <small>): swap innerHTML
+        document.querySelectorAll('[data-es-html]').forEach(el => {
+            el.innerHTML = lang === 'es' ? el.dataset.esHtml : el.dataset.enHtml;
+        });
+        document.documentElement.setAttribute('lang', lang);
+        langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+        currentLang = lang;
+    }
+
+    langBtn.addEventListener('click', () => {
+        setLang(currentLang === 'es' ? 'en' : 'es');
+    });
 </script>
 </body>
 </html>
