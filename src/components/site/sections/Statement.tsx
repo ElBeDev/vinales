@@ -8,21 +8,19 @@ export function Statement({ data, locale, settings }: SectionProps<"statement">)
   const text = pick(data.text, locale);
   return (
     <section className="statement">
-      <div className="smoke" aria-hidden="true">
-        <i />
-        <i />
-        <i />
-      </div>
-      <div className="container reveal">
-        <span className="statement-mark" aria-hidden="true">&ldquo;</span>
-        <p className="statement-quote">
+      <div className="container statement-grid">
+        <blockquote className="statement-quote reveal">
           <Rich text={pick(data.quote, locale)} />
-        </p>
-        {text && <p className="statement-text">{text}</p>}
-        {label && (
-          <a href={resolveHref(data.button.href, settings, locale)} className="btn btn-gold">
-            {label}
-          </a>
+        </blockquote>
+        {(text || label) && (
+          <div className="statement-side reveal" style={{ "--i": 1 } as React.CSSProperties}>
+            {text && <p className="statement-text">{text}</p>}
+            {label && (
+              <a href={resolveHref(data.button.href, settings, locale)} className="btn btn-gold">
+                {label}
+              </a>
+            )}
+          </div>
         )}
       </div>
     </section>

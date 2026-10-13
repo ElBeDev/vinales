@@ -11,7 +11,7 @@ export function formatTime(value: string, locale: Locale) {
 }
 
 // Agrupa días consecutivos con el mismo horario:
-// [{ days: "Lunes — Sábado", time: "12:00 pm — 8:00 pm" }, { days: "Domingo", time: "Cerrado" }]
+// [{ days: "Lunes a sábado", time: "12:00 pm – 8:00 pm" }, { days: "Domingo", time: "Cerrado" }]
 export function summarizeHours(hours: HoursValue, locale: Locale) {
   // Orden de lunes a domingo
   const week = [1, 2, 3, 4, 5, 6, 0]
@@ -21,7 +21,7 @@ export function summarizeHours(hours: HoursValue, locale: Locale) {
   const label = (h: HoursValue[number]) =>
     h.closed
       ? t("closed", locale)
-      : `${formatTime(h.open, locale)} — ${formatTime(h.close, locale)}`;
+      : `${formatTime(h.open, locale)} – ${formatTime(h.close, locale)}`;
 
   const groups: { from: number; to: number; time: string }[] = [];
   for (const h of week) {
@@ -35,7 +35,9 @@ export function summarizeHours(hours: HoursValue, locale: Locale) {
     days:
       g.from === g.to
         ? dayName(g.from, locale)
-        : `${dayName(g.from, locale)} — ${dayName(g.to, locale)}`,
+        : `${dayName(g.from, locale)} ${locale === "es" ? "a" : "to"} ${
+            locale === "es" ? dayName(g.to, locale).toLowerCase() : dayName(g.to, locale)
+          }`,
     time: g.time,
     closed: g.time === t("closed", locale),
   }));

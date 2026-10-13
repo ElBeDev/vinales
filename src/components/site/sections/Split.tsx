@@ -1,7 +1,7 @@
 import { pick } from "@/lib/i18n";
 import { Img } from "../Img";
 import { Head, stagger } from "./Head";
-import { num, type SectionProps } from "./types";
+import type { SectionProps } from "./types";
 
 export function Split({ data, locale }: SectionProps<"split">) {
   return (
@@ -20,7 +20,7 @@ export function Split({ data, locale }: SectionProps<"split">) {
             <div className="split-list">
               {data.items.map((item, i) => (
                 <div key={i} className="split-item reveal" style={stagger(i)}>
-                  <span>{num(i)}</span>
+                  <span aria-hidden="true" />
                   <div>
                     <h3>{pick(item.name, locale)}</h3>
                     <p>{pick(item.text, locale)}</p>

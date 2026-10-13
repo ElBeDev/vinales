@@ -105,7 +105,7 @@ export function Contact({ data, locale, settings }: SectionProps<"contact">) {
           <div className="contact-map reveal">
             <iframe
               src={mapEmbedUrl(settings, locale)}
-              title={`${t("location", locale)} — ${business.name}`}
+              title={`${t("location", locale)}: ${business.name}`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />

@@ -48,20 +48,20 @@ export const seedSettings: SiteSettings = {
   banner: { enabled: false, text: L(""), href: "" },
   seo: {
     title: L(
-      "Viñales Cigar Shop — Puros Cubanos Auténticos",
-      "Viñales Cigar Shop — Authentic Cuban Cigars",
+      "Viñales Cigar Shop | Puros Cubanos Auténticos",
+      "Viñales Cigar Shop | Authentic Cuban Cigars",
     ),
     description: L(
       "Auténticos puros cubanos traídos directamente de Cuba. Cortadores, encendedores, humidores, tabaco y pipas en Bucerías, Nayarit.",
       "Authentic Cuban cigars brought directly from Cuba. Cutters, lighters, humidors, tobacco and pipes in Bucerías, Nayarit.",
     ),
-    image: img("/images/hero.jpg", "Puros cubanos"),
+    image: img("/images/hero-cubanos.jpg", "Puros cubanos"),
   },
   legal: {
     ageGate: true,
     footer: L(
-      "© {year} Viñales Cigar Shop — Todos los derechos reservados",
-      "© {year} Viñales Cigar Shop — All rights reserved",
+      "© {year} Viñales Cigar Shop. Todos los derechos reservados.",
+      "© {year} Viñales Cigar Shop. All rights reserved.",
     ),
   },
 };
@@ -74,7 +74,7 @@ export const seedSections: SeedSection[] = [
   {
     type: "hero",
     data: {
-      image: img("/images/hero.jpg", "Puros cubanos", "Cuban cigars"),
+      image: img("/images/hero-cubanos.jpg", "Puros cubanos Partagás, Cohiba, Romeo y Julieta, Bolívar y Montecristo", "Partagás, Cohiba, Romeo y Julieta, Bolívar and Montecristo Cuban cigars"),
       video: "",
       showLogo: true,
       eyebrow: L("Puros Cubanos Auténticos", "Authentic Cuban Cigars"),
@@ -86,20 +86,6 @@ export const seedSections: SeedSection[] = [
       buttons: [
         { label: L("Explorar", "Explore"), href: "#puros", style: "solid" },
         { label: L("Visítanos", "Visit Us"), href: "#contacto", style: "outline" },
-      ],
-    },
-  },
-  {
-    type: "marquee",
-    data: {
-      items: [
-        { label: L("Puros cubanos", "Cuban cigars") },
-        { label: L("Humidores", "Humidors") },
-        { label: L("Cortadores", "Cutters") },
-        { label: L("Encendedores", "Lighters") },
-        { label: L("Tabaco para pipa", "Pipe tobacco") },
-        { label: L("Lounge", "Lounge") },
-        { label: L("Bucerías, Nayarit", "Bucerías, Nayarit") },
       ],
     },
   },
@@ -121,8 +107,8 @@ export const seedSections: SeedSection[] = [
       eyebrow: L("Selección Exclusiva", "Exclusive Selection"),
       title: L("Puros *Cubanos*", "Cuban *Cigars*"),
       text: L(
-        "Cada puro en nuestra vitrina viene directamente de las mejores vegas de Cuba. Sin intermediarios, sin compromisos — solo el auténtico tabaco cubano que merece tu tiempo y tu paladar.",
-        "Every cigar in our showcase comes directly from the finest Cuban tobacco farms. No middlemen, no compromises — only the authentic Cuban tobacco your time and palate deserve.",
+        "Cada puro en nuestra vitrina viene directamente de las mejores vegas de Cuba. Sin intermediarios, sin compromisos. Solo el auténtico tabaco cubano que merece tu tiempo y tu paladar.",
+        "Every cigar in our showcase comes directly from the finest Cuban tobacco farms. No middlemen, no compromises. Only the authentic Cuban tobacco your time and palate deserve.",
       ),
       banner: img(pexels(34217309), "Puros cubanos premium en caja de madera", "Premium Cuban cigars in a wooden box"),
       bannerLabel: L("Colección Premium", "Premium Collection"),
@@ -147,8 +133,8 @@ export const seedSections: SeedSection[] = [
           icon: "torpedo",
           name: L("Torpedos & Figurados"),
           text: L(
-            "La vitola más artesanal. Cada corte revela una experiencia diferente — el puro que exige maestría desde el encendido hasta el último tercio.",
-            "The most handcrafted vitola. Every cut reveals a different experience — the cigar that demands mastery from the first light to the final third.",
+            "La vitola más artesanal. Cada corte revela una experiencia diferente: es el puro que exige maestría desde el encendido hasta el último tercio.",
+            "The most handcrafted vitola. Every cut reveals a different experience: it is the cigar that demands mastery from the first light to the final third.",
           ),
         },
       ],
@@ -178,16 +164,16 @@ export const seedSections: SeedSection[] = [
           icon: "flame",
           name: L("Encendedores", "Lighters"),
           text: L(
-            "Llama triple, torch y encendedores de cedro. Sin sabores ajenos — solo calor limpio para tu tabaco.",
-            "Triple flame, torch and cedar lighters. No foreign flavors — just clean heat for your tobacco.",
+            "Llama triple, torch y encendedores de cedro. Sin sabores ajenos, solo calor limpio para tu tabaco.",
+            "Triple flame, torch and cedar lighters. No foreign flavors, just clean heat for your tobacco.",
           ),
         },
         {
           icon: "humidor",
           name: L("Humidores", "Humidors"),
           text: L(
-            "De viaje y de gabinete. Mantén tus puros al 70% de humedad — la condición perfecta para preservar sabor y aroma.",
-            "Travel and cabinet humidors. Keep your cigars at 70% humidity — the perfect condition to preserve flavor and aroma.",
+            "De viaje y de gabinete. Mantén tus puros al 70% de humedad, la condición perfecta para preservar sabor y aroma.",
+            "Travel and cabinet humidors. Keep your cigars at 70% humidity, the perfect condition to preserve flavor and aroma.",
           ),
         },
         {
@@ -224,8 +210,8 @@ export const seedSections: SeedSection[] = [
         {
           name: L("Pipas", "Pipes"),
           text: L(
-            "Distintos estilos y materiales — bruyère, corncob, meerschaum. Para el principiante curioso y el coleccionista exigente.",
-            "Different styles and materials — bruyère, corncob, meerschaum. For the curious beginner and the discerning collector.",
+            "Distintos estilos y materiales: bruyère, corncob, meerschaum. Para el principiante curioso y el coleccionista exigente.",
+            "Different styles and materials: bruyère, corncob, meerschaum. For the curious beginner and the discerning collector.",
           ),
         },
         {
@@ -309,8 +295,8 @@ export const seedSections: SeedSection[] = [
         "Here you don't just come to buy,\nyou come to *enjoy* and find\nwhat you truly love.",
       ),
       text: L(
-        "Te orientamos para que disfrutes toda la experiencia. Más que una tienda — un lugar donde el buen gusto y el conocimiento van siempre de la mano.",
-        "We guide you to enjoy the full experience. More than a shop — a place where good taste and knowledge always go hand in hand.",
+        "Te orientamos para que disfrutes toda la experiencia. Más que una tienda, un lugar donde el buen gusto y el conocimiento van siempre de la mano.",
+        "We guide you to enjoy the full experience. More than a shop, a place where good taste and knowledge always go hand in hand.",
       ),
       button: { label: L("Visítanos", "Visit Us"), href: "#contacto" },
     },
