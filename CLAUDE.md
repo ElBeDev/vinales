@@ -14,3 +14,5 @@ Ver README.md para estructura y comandos. Notas para trabajar aquí:
 - Cada Server Action del panel debe empezar con `await requireAdmin()`.
 - El CSS del sitio es CSS plano portado del diseño original (`app/[locale]/site.css`);
   Tailwind solo se usa en el panel (`app/admin/admin.css`).
+- Las fuentes están en `src/app/fonts/` (next/font/local). No volver a `next/font/google`:
+  en Vercel falló el build de Turbopack al descargarlas ("queries have exactly one entry").

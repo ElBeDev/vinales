@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Cormorant_Garamond, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
+import { cinzel, cormorant, montserrat } from "@/app/fonts";
 import { AgeGate } from "@/components/site/AgeGate";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
@@ -11,15 +11,6 @@ import { isLocale, locales, pick, t, type Locale } from "@/lib/i18n";
 import { whatsappUrl } from "@/lib/links";
 import { siteUrl, storeJsonLd } from "@/lib/seo";
 import "./site.css";
-
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-cinzel" });
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-montserrat" });
 
 export const revalidate = 3600;
 
