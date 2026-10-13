@@ -90,6 +90,20 @@ export const seedSections: SeedSection[] = [
     },
   },
   {
+    type: "marquee",
+    data: {
+      items: [
+        { label: L("Puros cubanos", "Cuban cigars") },
+        { label: L("Humidores", "Humidors") },
+        { label: L("Cortadores", "Cutters") },
+        { label: L("Encendedores", "Lighters") },
+        { label: L("Tabaco para pipa", "Pipe tobacco") },
+        { label: L("Lounge", "Lounge") },
+        { label: L("Bucerías, Nayarit", "Bucerías, Nayarit") },
+      ],
+    },
+  },
+  {
     type: "quote",
     data: {
       quote: L(
@@ -228,6 +242,8 @@ export const seedSections: SeedSection[] = [
     type: "gallery",
     data: {
       anchor: "galeria",
+      eyebrow: L("Galería", "Gallery"),
+      title: L("Tradición *cubana*", "Cuban *tradition*"),
       items: [
         {
           image: img(pexels(33105628), "Cubano disfrutando puros premium", "Cuban man enjoying premium cigars"),
@@ -301,6 +317,11 @@ export const seedSections: SeedSection[] = [
   },
   {
     type: "contact",
-    data: { anchor: "contacto", showMap: true },
+    data: {
+      anchor: "contacto",
+      eyebrow: L("Visítanos", "Visit us"),
+      title: L("Te esperamos en *Bucerías*", "See you in *Bucerías*"),
+      showMap: true,
+    },
   },
 ];

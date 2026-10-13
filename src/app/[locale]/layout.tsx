@@ -12,14 +12,14 @@ import { whatsappUrl } from "@/lib/links";
 import { siteUrl, storeJsonLd } from "@/lib/seo";
 import "./site.css";
 
-const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-cinzel" });
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-cinzel" });
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
 });
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["300", "400", "500", "600"], variable: "--font-montserrat" });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-montserrat" });
 
 export const revalidate = 3600;
 
@@ -27,7 +27,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export const viewport: Viewport = { themeColor: "#160d06" };
+export const viewport: Viewport = { themeColor: "#0f0a07" };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -88,6 +88,9 @@ export default async function SiteLayout({
           logo={settings.business.logo.src}
           nav={settings.nav}
           banner={bannerText ? { text: bannerText, href: settings.banner.href } : null}
+          address={settings.business.address}
+          phone={settings.contact.phone}
+          email={settings.contact.email}
         />
         {children}
         <Footer settings={settings} locale={locale} />

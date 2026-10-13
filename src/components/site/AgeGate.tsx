@@ -50,10 +50,10 @@ export function AgeGate({ locale, logo, name }: { locale: Locale; logo: string; 
         <p>{denied ? t("ageDenied", locale) : t("ageText", locale)}</p>
         {!denied && (
           <div className="age-actions">
-            <button type="button" className="btn-gold" onClick={accept}>
+            <button type="button" className="btn btn-primary" onClick={accept}>
               {t("ageYes", locale)}
             </button>
-            <button type="button" className="btn-ghost" onClick={() => setDenied(true)}>
+            <button type="button" className="btn btn-outline" onClick={() => setDenied(true)}>
               {t("ageNo", locale)}
             </button>
           </div>

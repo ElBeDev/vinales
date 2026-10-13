@@ -7,15 +7,20 @@ export function Statement({ data, locale, settings }: SectionProps<"statement">)
   const label = pick(data.button.label, locale);
   const text = pick(data.text, locale);
   return (
-    <section className="exp-sec">
-      <div className="exp-inner reveal">
-        <span className="exp-mark">&ldquo;</span>
-        <p className="exp-quote">
+    <section className="statement">
+      <div className="smoke" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </div>
+      <div className="container reveal">
+        <span className="statement-mark" aria-hidden="true">&ldquo;</span>
+        <p className="statement-quote">
           <Rich text={pick(data.quote, locale)} />
         </p>
-        {text && <p className="exp-sub">{text}</p>}
+        {text && <p className="statement-text">{text}</p>}
         {label && (
-          <a href={resolveHref(data.button.href, settings, locale)} className="btn-gold">
+          <a href={resolveHref(data.button.href, settings, locale)} className="btn btn-gold">
             {label}
           </a>
         )}
