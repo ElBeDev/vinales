@@ -1,37 +1,34 @@
 import { pick } from "@/lib/i18n";
 import { Icon } from "../Icon";
 import { Img } from "../Img";
-import { Rich } from "../Rich";
-import { delay, type SectionProps } from "./types";
+import { Head, stagger } from "./Head";
+import type { SectionProps } from "./types";
 
+// Sección en tono papel para romper el fondo oscuro.
 export function Features({ data, locale }: SectionProps<"features">) {
   return (
-    <section className="acc-sec" id={data.anchor || undefined}>
-      <div className="s-inner">
-        <div className="acc-layout">
-          <div className="acc-sticky reveal">
-            <p className="s-label">{pick(data.eyebrow, locale)}</p>
-            <h2 className="s-title">
-              <Rich text={pick(data.title, locale)} />
-            </h2>
-            <div className="gold-rule" />
-            <p className="s-text">{pick(data.text, locale)}</p>
-            {data.image.src && (
-              <div className="acc-photo">
-                <Img image={data.image} locale={locale} sizes="(max-width: 900px) 100vw, 560px" />
-                <div className="acc-photo-overlay" />
-              </div>
-            )}
-          </div>
-          <div className="acc-grid">
-            {data.items.map((item, i) => (
-              <div key={i} className={`acc-card reveal${delay(i)}`}>
-                {item.icon !== "none" && <Icon name={item.icon} className="acc-icon" />}
-                <h3 className="acc-name">{pick(item.name, locale)}</h3>
-                <p className="acc-desc">{pick(item.text, locale)}</p>
-              </div>
-            ))}
-          </div>
+    <section className="sec paper" id={data.anchor || undefined}>
+      <div className="container features-grid">
+        <div className="features-aside">
+          <Head eyebrow={data.eyebrow} title={data.title} text={data.text} locale={locale} />
+          {data.image.src && (
+            <div className="features-photo reveal">
+              <Img image={data.image} locale={locale} sizes="(max-width: 920px) 100vw, 560px" />
+            </div>
+          )}
+        </div>
+        <div className="features-list">
+          {data.items.map((item, i) => (
+            <div key={i} className="feature reveal" style={stagger(i)}>
+              {item.icon !== "none" && (
+                <div className="feature-icon">
+                  <Icon name={item.icon} />
+                </div>
+              )}
+              <h3>{pick(item.name, locale)}</h3>
+              <p>{pick(item.text, locale)}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

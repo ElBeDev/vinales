@@ -7,6 +7,7 @@ import { Faq } from "./Faq";
 import { Features } from "./Features";
 import { Gallery } from "./Gallery";
 import { Hero } from "./Hero";
+import { Marquee } from "./Marquee";
 import { Quote } from "./Quote";
 import { Split } from "./Split";
 import { Statement } from "./Statement";
@@ -25,6 +26,8 @@ export function RenderSection({
   switch (section.type) {
     case "hero":
       return <Hero data={section.data} {...common} />;
+    case "marquee":
+      return <Marquee data={section.data} locale={locale} />;
     case "quote":
       return <Quote data={section.data} {...common} />;
     case "cards":

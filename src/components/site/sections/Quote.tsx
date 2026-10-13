@@ -4,18 +4,18 @@ import type { SectionProps } from "./types";
 
 export function Quote({ data, locale }: SectionProps<"quote">) {
   return (
-    <div className="strip">
-      <div className="strip-inner">
-        <blockquote>
+    <section className="sec quote-sec">
+      <div className="container quote-grid">
+        <blockquote className="quote-text reveal">
           <Rich text={pick(data.quote, locale)} />
         </blockquote>
         {data.statValue && (
-          <div className="strip-stat">
-            <div className="stat-num">{data.statValue}</div>
-            <div className="stat-label">{pick(data.statLabel, locale)}</div>
+          <div className="quote-stat reveal" style={{ "--i": 1 } as React.CSSProperties}>
+            <b>{data.statValue}</b>
+            <span>{pick(data.statLabel, locale)}</span>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }

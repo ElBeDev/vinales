@@ -49,6 +49,14 @@ const ui = {
     "Sorry, you must be of legal age to enter.",
   ),
   close: L("Cerrar", "Close"),
+  call: L("Llamar", "Call"),
+  email: L("Correo", "Email"),
+  explore: L("Explora", "Explore"),
+  follow: L("Síguenos", "Follow us"),
+  adultsOnly: L(
+    "Venta exclusiva a mayores de 18 años.",
+    "Tobacco products sold to adults 18+ only.",
+  ),
   dayNames: {
     es: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
     en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

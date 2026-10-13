@@ -110,6 +110,21 @@ export const SECTION_TYPES = {
     ],
   },
 
+  marquee: {
+    label: "Franja de palabras",
+    description: "Palabras que corren de lado a lado (productos, servicios, lugar).",
+    fields: [
+      {
+        kind: "list",
+        key: "items",
+        label: "Palabras",
+        itemLabel: "Palabra",
+        summaryKey: "label",
+        fields: [{ kind: "i18n", key: "label", label: "Texto" }],
+      },
+    ],
+  },
+
   quote: {
     label: "Franja con frase",
     description: "Franja roja con una cita y un dato destacado.",
@@ -210,9 +225,11 @@ export const SECTION_TYPES = {
 
   gallery: {
     label: "Galería",
-    description: "Fotos en fila con título. Al tocarlas se ven en grande.",
+    description: "Mosaico de fotos con título. Al tocarlas se ven en grande.",
     fields: [
       anchor,
+      { ...eyebrow, help: "Opcional." },
+      { ...title, label: "Título (opcional)" },
       {
         kind: "list",
         key: "items",
@@ -298,6 +315,8 @@ export const SECTION_TYPES = {
     description: "Ubicación, horario y contacto. Los datos salen de «Info del negocio».",
     fields: [
       anchor,
+      eyebrow,
+      title,
       { kind: "bool", key: "showMap", label: "Mostrar mapa" },
     ],
   },
@@ -324,6 +343,7 @@ export type SectionData = {
     tagline: Localized;
     buttons: (Button & { style: "solid" | "outline" })[];
   };
+  marquee: { items: { label: Localized }[] };
   quote: { quote: Localized; statValue: string; statLabel: Localized };
   cards: {
     anchor: string;
@@ -353,6 +373,8 @@ export type SectionData = {
   };
   gallery: {
     anchor: string;
+    eyebrow: Localized;
+    title: Localized;
     items: { image: ImageValue; title: Localized; subtitle: Localized }[];
   };
   statement: { quote: Localized; text: Localized; button: Button };
@@ -369,7 +391,7 @@ export type SectionData = {
     title: Localized;
     items: { q: Localized; a: Localized }[];
   };
-  contact: { anchor: string; showMap: boolean };
+  contact: { anchor: string; eyebrow: Localized; title: Localized; showMap: boolean };
 };
 
 export type Section = {

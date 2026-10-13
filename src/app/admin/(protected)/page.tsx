@@ -7,9 +7,10 @@ import { createSection } from "./actions";
 
 function summaryOf(data: unknown) {
   const d = (data ?? {}) as Record<string, { es?: string } | undefined> & {
-    items?: { title?: { es?: string } }[];
+    items?: { title?: { es?: string }; label?: { es?: string } }[];
   };
-  const firstItem = Array.isArray(d.items) ? d.items[0]?.title?.es : "";
+  const items = Array.isArray(d.items) ? d.items : [];
+  const firstItem = items[0]?.title?.es || items.map((i) => i.label?.es).filter(Boolean).join(" · ");
   const text = d.title?.es || d.quote?.es || d.eyebrow?.es || firstItem || "";
   return text.replace(/\*/g, "").replace(/\n/g, " ").slice(0, 90);
 }

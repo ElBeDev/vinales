@@ -9,4 +9,3 @@ export type SectionProps<K extends SectionType> = {
 };
 
 export const num = (i: number) => String(i + 1).padStart(2, "0");
-export const delay = (i: number) => (i % 4 === 0 ? "" : ` d${i % 4}`);
