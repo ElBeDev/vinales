@@ -39,6 +39,10 @@ Sin `BLOB_READ_WRITE_TOKEN`, las fotos subidas en desarrollo se guardan en `publ
 4. Con `DATABASE_URL` de producción en `.env.local`, correr `npm run db:setup` una vez.
 5. Deploy.
 
+> Ya está hecho para producción: proyecto `vinales` en Vercel con Neon (`vinales-db`) y
+> Blob (`vinales-media`). Ojo: `vercel env pull` / `vercel link` reescriben `DATABASE_URL`
+> en `.env.local` con la base de **producción**; regrésalo al Postgres local después.
+
 ## Cómo está armado
 
 ```

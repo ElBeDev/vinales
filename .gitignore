@@ -45,3 +45,6 @@ next-env.d.ts
 # uploads locales de desarrollo
 /public/uploads/*
 !/public/uploads/.gitkeep
+
+# credenciales locales
+.admin-produccion.txt
